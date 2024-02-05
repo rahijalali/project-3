@@ -1,0 +1,36 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+<div class="row">
+  <div class="col">
+    {% if customer %}
+    <h1>Name: {{ customer.name }}</h1>
+    <h1>Id: {{ customer.id }}</h1>
+    <p>{{ customer.balance }}</p>
+
+    <h2>Transactions</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>Name</th>
+        <th>credit</th>
+        <th>debit</th>
+        <th>Modified Date</th>
+      </tr>
+      {% for transaction in transaction_list %}
+      <tr>
+        <td>{{ transaction.customer.name }}</td>
+        <td>{{ transaction.credit }}</td>
+        <td>{{ transaction.debit }}</td>
+        <td>{{ transaction.modifiedDate }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    {% endif %}
+  </div>
+
+  <div class="col"></div>
+</div>

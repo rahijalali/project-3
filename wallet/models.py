@@ -20,6 +20,8 @@ class Transaction(models.Model):
     modifiedDate= models.DateTimeField("transaction date time")
     def __str__(self):
         return self.customer.name
+    def customer_id(self):
+        return self.customer.id
     def last_modiffied(self):
         return self.modifiedDate >= timezone.now() - datetime.timedelta(days=1)
     def credit_amount(self):
