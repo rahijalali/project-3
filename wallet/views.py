@@ -27,7 +27,7 @@ def voidtransaction(request):
 def customer(request):
     customer = Customer(name=request.POST["name"],balance=0, modifiedDate=timezone.now())
     customer.save()
-    return redirect('/wallet/' + request.POST["customerId"])
+    return redirect('/wallet/' )
 
 def details(request, customer_id):
     logging.debug(customer_id)
