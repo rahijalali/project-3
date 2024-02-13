@@ -11,11 +11,23 @@ def index(request):
         "customer_list": customer_list,
     }
     return render(request,"wallet/index.html",context)
-
+    
+def addtransaction(request):
+    customer= Customer.objects.get(pk=request.POST["customerId"])
+    tr=Transaction(customer=customer, credit=request.POST["credit"], debit=request.POST["debit"],modifiedDate=timezone.now())
+    tr.save()
+    return redirect('/wallet/' + request.POST["customerId"])
+    
+def voidtransaction(request):
+    tr= Transaction.objects.get(pk=request.POST["transactionId"])
+    voidTr=Transaction(customer= tr.customer, debit=tr.credit, credit=tr.debit,modifiedDate=timezone.now())
+    voidTr.save()
+    return redirect('/wallet/' + str(tr.customer.id))
+    
 def customer(request):
     customer = Customer(name=request.POST["name"],balance=0, modifiedDate=timezone.now())
     customer.save()
-    return redirect('/wallet/')
+    return redirect('/wallet/' + request.POST["customerId"])
 
 def details(request, customer_id):
     logging.debug(customer_id)
@@ -33,6 +45,8 @@ def customerdelete(request):
     return redirect('/wallet/')
 
 def customerupdate(request):
-    customer = Customer.objects.get(id=1)
-    customer.update()
-    return redirect('/wallet/')
+    customer= Customer.objects.get(pk=request.POST["customerId"]) 
+    customer.name=request.POST["name"]
+    customer.balance=request.POST["balance"]
+    customer.save()
+    return redirect('/wallet/' + request.POST["customerId"])
