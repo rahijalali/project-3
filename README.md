@@ -45,3 +45,33 @@ To Do- (All the User stories were initially entered in the 'To Do' column)
 In Progress- (then during development story they were moved into the 'In Progress' column)
 Done- (and then finally they get moved into 'Done' once the development completes)
 Please find my Kanban Board with my user stories here: <img alt="kanban.png" src=./assets/img/kanban.png>
+
+## Related user Stories
+
+- as a user I can easly add credit and debit transaction
+  . as a user I can add new costumers
+  . as a user I can check the costumers transaction
+
+## Tasks
+
+The tasks for the website development process was closely followed as mentioned in CI's Django module "I Think Therefore I Blog" walkthrough project. The task is generally the developers step towards preparing the app. The tasks that I have followed during the development phase were carried out in this order.
+
+Before Project Inception
+
+.Design ERD and Data
+.Create Repository in GitHub
+.Create Project, User Stories and prepare Kanban Board
+
+## Creation of Project in GitPod
+
+.Create the django project.
+.Create Database Models
+.Set up models.py file in "blog" directory
+.Build Admin site
+.Set up Templates
+.Create base.html
+.Create index.html, view and style
+.Set up template file features with views.py and urls.py
+.Install Allauth for sign in, sign up and sign out templates with- pip3 install django-allauth
+
+## Database Diagram
