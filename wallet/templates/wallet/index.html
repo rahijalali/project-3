@@ -11,10 +11,14 @@
       <tr>
         <th>Name</th>
         <th>Balance</th>
+        <th></th>
       </tr>
       {% for customer in customer_list %}
       <tr>
-        <td>{{ customer.name }}</td>
+        <td>
+          {% csrf_token %}
+            <a href='{{customer.id}}'>{{ customer.name }}</a>
+          </td>
         <td>{{ customer.balance }}</td>
       </tr>
       {% endfor %}
@@ -38,10 +42,7 @@
             />
           </td>
           <td><input type="submit" value="Add" class="btn btn-primary" /></td>
-          <tr>
-            <td> Details:</td>
-            <td> </td>
-          </tr>
+          
       </table>
 
     </form></div>

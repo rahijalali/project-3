@@ -16,12 +16,17 @@ def addtransaction(request):
     customer= Customer.objects.get(pk=request.POST["customerId"])
     tr=Transaction(customer=customer, credit=request.POST["credit"], debit=request.POST["debit"],modifiedDate=timezone.now())
     tr.save()
+    customer.balance=customer.balance+int(request.POST["credit"])- int(request.POST["debit"])
+    customer.save()
     return redirect('/wallet/' + request.POST["customerId"])
     
 def voidtransaction(request):
     tr= Transaction.objects.get(pk=request.POST["transactionId"])
+    customer= Customer.objects.get(pk=tr.customer.id)
     voidTr=Transaction(customer= tr.customer, debit=tr.credit, credit=tr.debit,modifiedDate=timezone.now())
     voidTr.save()
+    customer.balance=customer.balance+int(request.POST["credit"])- int(request.POST["debit"])
+    customer.save()
     return redirect('/wallet/' + str(tr.customer.id))
     
 def customer(request):

@@ -24,21 +24,22 @@ Managing finances can be overwhelming, so I've created this easy-to-use money bo
 
 The primary objectives or aims of bookkeeping include:
 
-.Recording Transactions: Documenting all financial transactions, including sales, purchases, expenses, and payments.
+. Recording Transactions: Documenting all financial transactions, including debit and credit
 
-.Classification: Categorizing transactions into appropriate accounts to facilitate analysis and reporting.
+. Classification: Categorizing transactions into appropriate accounts to facilitate analysis and reporting.
 
-.Accuracy: Ensuring that recorded information is precise and error-free to produce reliable financial statements.
+. Accuracy: Ensuring that recorded information is precise and error-free to produce reliable financial statements.
 
-.Compliance: Adhering to accounting principles and standards to meet legal and regulatory requirements.
+. Compliance: Adhering to accounting principles and standards to meet legal and regulatory requirements.
 
-.Financial Analysis: Providing a basis for financial analysis, budgeting, and decision-making within the organization.
+. Financial Analysis: Providing a basis for financial analysis, budgeting, and decision-making within the organization.
 
-.Facilitating Reporting: Generating financial statements, such as the income statement, balance sheet, and cash flow statement, to communicate the financial position of the business.
+. Facilitating Reporting: Generating financial statements, such as the income statement, balance sheet, and cash flow statement, to communicate the financial position of the business.
 
 In summary, the aim of bookkeeping is to maintain a systematic and accurate record of financial transactions, which in turn supports informed decision-making and financial analysis for businesses.
 
-##Agile Methodology
+## Agile Methodology
+
 The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board. Through the use of the Kanban board in the projects view in Github, the project was divided into a few different sections:
 
 To Do- (All the User stories were initially entered in the 'To Do' column)
@@ -48,9 +49,9 @@ Please find my Kanban Board with my user stories here: <img alt="kanban.png" src
 
 ## Related user Stories
 
-- as a user I can easly add credit and debit transaction
-  . as a user I can add new costumers
-  . as a user I can check the costumers transaction
+. as a user I can easly add credit and debit transaction
+. as a user I can add new costumers
+. as a user I can check the costumers transaction
 
 ## Tasks
 
@@ -58,20 +59,24 @@ The tasks for the website development process was closely followed as mentioned 
 
 Before Project Inception
 
-.Design ERD and Data
-.Create Repository in GitHub
-.Create Project, User Stories and prepare Kanban Board
+. Design ERD and Data
+. Create Repository in GitHub
+. Create Project, User Stories and prepare Kanban Board
 
 ## Creation of Project in GitPod
 
-.Create the django project.
-.Create Database Models
-.Set up models.py file in "blog" directory
-.Build Admin site
-.Set up Templates
-.Create base.html
-.Create index.html, view and style
-.Set up template file features with views.py and urls.py
-.Install Allauth for sign in, sign up and sign out templates with- pip3 install django-allauth
+. Create the django project.
+. Create Database Models
+. Set up models.py file in "blog" directory
+. Build Admin site
+. Set up Templates
+. Create base.html
+. Create index.html, view and style
+. Set up template file features with views.py and urls.py
+. Install Allauth for sign in, sign up and sign out templates with- pip3 install django-allauth
 
 ## Database Diagram
+
+Smart Draw was used to create a database schema to visualise the types of custom models the project requires. This schema was used as a guide to what needed to be added to each model. Below is the Database structure that this project is based on. The relationship between Entities Post, Author, Destination are shown in this diagram.
+
+<img alt="(ERD.jpg" src=./assets/img/ERD.jpg>
