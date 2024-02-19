@@ -81,4 +81,23 @@ Before Project Inception
 
 Smart Draw was used to create a database schema to visualise the types of custom models the project requires. This schema was used as a guide to what needed to be added to each model. Below is the Database structure that this project is based on. The relationship between Entities Post, Author, Destination are shown in this diagram.
 
-<img alt="(ERD.jpg" src=./assets/img/ERD.jpg>
+<img alt="ERD.jpg" src=./assets/img/ERD.jpg>
+
+## Features
+
+# Pages
+
+/## ##/
+
+- https://rahiwallet-1dd88e63e8bf.herokuapp.com/wallet/1/
+
+- https://rahiwallet-1dd88e63e8bf.herokuapp.com/wallet/
+
+## Admin Panel/Superuser
+
+- Admin accesses the project via logging into Django admin panel with a superuser id and password. The page appears as shown;
+
+<img alt="admin-page.png" src=.assets/img/admin-page.png>
+
+- A superuser "admin" was created for this project to manage the admin panel.
+- On the Admin Panel, as an admin I have full access to CRUD functionality so I can view, Create, Read, Update, and Delete the following ones:
