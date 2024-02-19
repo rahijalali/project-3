@@ -97,7 +97,13 @@ Smart Draw was used to create a database schema to visualise the types of custom
 
 - Admin accesses the project via logging into Django admin panel with a superuser id and password. The page appears as shown;
 
-<img alt="admin-page.png" src=.assets/img/admin-page.png>
+<img alt="admin-page.png" src=./assets/img/admin-page.png>
 
 - A superuser "admin" was created for this project to manage the admin panel.
 - On the Admin Panel, as an admin I have full access to CRUD functionality so I can view, Create, Read, Update, and Delete the following ones:
+
+## Admin login
+
+this is where admin can sign in with username and password.
+
+<img alt= " signin.png" src= ./assets/img/signin.png>
