@@ -44,7 +44,9 @@ The Agile Methodology was used to plan this project. This was implemented throug
 To Do- (All the User stories were initially entered in the 'To Do' column)
 In Progress- (then during development story they were moved into the 'In Progress' column)
 Done- (and then finally they get moved into 'Done' once the development completes)
-Please find my Kanban Board with my user stories here: <img alt="kanban.png" src=./assets/img/kanban.png>
+Please find my Kanban Board with my user stories here:
+
+<img alt="kanban.png" src=./assets/img/kanban.png>
 
 ## Related user Stories
 
