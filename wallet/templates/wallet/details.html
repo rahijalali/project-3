@@ -1,157 +1,147 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <link
+<link
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
   rel="stylesheet"
   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
   crossorigin="anonymous"
 />
-  <title>book keeping</title>
-</head>
-<body>
-  <div class="row">
-    <div class="col">
-      {% if customer %}
-      <h1>Name: {{ customer.name }}</h1>
-      <h1>Id: {{ customer.id }}</h1>
-      <p>{{ customer.balance }}</p>
-  
-      <h2>Transactions</h2>
-      <table class="table table-striped">
+<div class="row">
+  <div class="col">
+    {% if customer %}
+    <h1>Name: {{ customer.name }}</h1>
+    <h1>Id: {{ customer.id }}</h1>
+    <p>{{ customer.balance }}</p>
+
+    <h2>Transactions</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>Name</th>
+        <th>Credit</th>
+        <th>Debit</th>
+        <th>Modified Date</th>
+        <th></th>
+      </tr>
+      {% for transaction in transaction_list %}
+      <tr>
+        <td>{{ transaction.customer.name }}</td>
+        <td>{{ transaction.credit }}</td>
+        <td>{{ transaction.debit }}</td>
+        <td>{{ transaction.modifiedDate }}</td>
+        <td>
+          <form action="{% url 'voidtransaction' %}" method="post">
+            {% csrf_token %}
+            <input
+              type="text"
+              name="transactionId"
+              id="transactionId"
+              value={{transaction.id}}
+              hidden
+            />
+            <input type="submit" class="btn btn-primary mb-2" value="Void" />
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    {% endif %}
+  </div>
+
+  <div class="col">
+    <form action="{% url 'customerupdate' %}" method="post">
+      {% csrf_token %}
+      <h1>Edit customer</h1>
+      <table>
         <tr>
+          <th>Customer Id</th>
           <th>Name</th>
-          <th>Credit</th>
-          <th>Debit</th>
-          <th>Modified Date</th>
+          <th>Balance</th>
           <th></th>
         </tr>
-        {% for transaction in transaction_list %}
         <tr>
-          <td>{{ transaction.customer.name }}</td>
-          <td>{{ transaction.credit }}</td>
-          <td>{{ transaction.debit }}</td>
-          <td>{{ transaction.modifiedDate }}</td>
           <td>
-            <form action="{% url 'voidtransaction' %}" method="post">
-              {% csrf_token %}
-              <input
-                type="text"
-                name="transactionId"
-                id="transactionId"
-                value={{transaction.id}}
-                hidden
-              />
-              <input type="submit" class="btn btn-primary mb-2" value="Void" />
-            </form>
+            <input
+              class="form-control"
+              type="number"
+              value={{customer.id}}
+              id="customerId"
+              name="customerId"
+              readonly
+            />
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="text"
+              id="name"
+              name="name"
+              value={{customer.name}}
+            />
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="number"
+              id="balance"
+              name="balance"
+              value={{customer.balance}}
+            />
+          </td>
+          <td><input type="submit" value="Save" class="btn btn-primary" /></td>
+        </tr>
+      </table>
+    </form>
+    <form action="{% url 'addtransaction' %}" method="post">
+      {% csrf_token %}
+      <h1>New Transaction</h1>
+      <table>
+        <tr>
+          <th>Customer Id</th>
+          <th>Credit</th>
+          <th>Debit</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>
+            <input
+              class="form-control"
+              type="number"
+              value={{customer.id}}
+              id="customerId"
+              name="customerId"
+              readonly
+            />
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="number"
+              id="credit"
+              name="credit"
+              placeholder="Credit"
+              value= "0"
+            />
+          </td>
+          <td>
+            <input
+              class="form-control"
+              type="number"
+              id="debit"
+              name="debit"
+              placeholder="Debit"
+              value= "0"
+            />
+          </td>
+          <td>
+            <input
+              type="submit"
+              value="Add Transaction"
+              class="btn btn-primary"
+            />
           </td>
         </tr>
-        {% endfor %}
       </table>
-  
-      {% endif %}
-    </div>
-  
-    <div class="col">
-      <form action="{% url 'customerupdate' %}" method="post">
-        {% csrf_token %}
-        <h1>Edit customer</h1>
-        <table>
-          <tr>
-            <th>Customer Id</th>
-            <th>Name</th>
-            <th>Balance</th>
-            <th></th>
-          </tr>
-          <tr>
-            <td>
-              <input
-                class="form-control"
-                type="number"
-                value={{customer.id}}
-                id="customerId"
-                name="customerId"
-                readonly
-              />
-            </td>
-            <td>
-              <input
-                class="form-control"
-                type="text"
-                id="name"
-                name="name"
-                value={{customer.name}}
-              />
-            </td>
-            <td>
-              <input
-                class="form-control"
-                type="number"
-                id="balance"
-                name="balance"
-                value={{customer.balance}}
-              />
-            </td>
-            <td><input type="submit" value="Save" class="btn btn-primary" /></td>
-          </tr>
-        </table>
-      </form>
-      <form action="{% url 'addtransaction' %}" method="post">
-        {% csrf_token %}
-        <h1>New Transaction</h1>
-        <table>
-          <tr>
-            <th>Customer Id</th>
-            <th>Credit</th>
-            <th>Debit</th>
-            <th></th>
-          </tr>
-          <tr>
-            <td>
-              <input
-                class="form-control"
-                type="number"
-                value={{customer.id}}
-                id="customerId"
-                name="customerId"
-                readonly
-              />
-            </td>
-            <td>
-              <input
-                class="form-control"
-                type="number"
-                id="credit"
-                name="credit"
-                placeholder="Credit"
-                value= "0"
-              />
-            </td>
-            <td>
-              <input
-                class="form-control"
-                type="number"
-                id="debit"
-                name="debit"
-                placeholder="Debit"
-                value= "0"
-              />
-            </td>
-            <td>
-              <input
-                type="submit"
-                value="Add Transaction"
-                class="btn btn-primary"
-              />
-            </td>
-          </tr>
-        </table>
-      </form>
-      <div><a class="btn btn-danger" href="/wallet/deletecustomer/{{customer.id}}" >Delete Customer </a></div>
-    </div>
+    </form>
+    <div><a class="btn btn-danger" href="/wallet/deletecustomer/{{customer.id}}" >Delete Customer </a></div>
   </div>
-  
-  
-</body>
-</html>
+</div>
 
