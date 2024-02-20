@@ -143,4 +143,13 @@ this is where admin can sign in with username and password.
 
 I used the following validation tools to validate CSS. Below the link of TESTING.md file, which includes all validation results.
 
-- CSS using [Jigsaw CSS validator]
+- HTML using [validator w3]
+  <img alt="w3-validator.jpg" scr=./assets/img/w3-validator.jpg>
+
+### Manual Testing
+
+Testing has taken place continuously throughout the development of the project. Each view was tested regularly.
+
+<img alt= "transaction-page.jpg" scr=./assets/img/transaction-page.jpg>
+
+<img alt= "customer-page.jpg" scr=./assets/img/customer-page.jpg>
