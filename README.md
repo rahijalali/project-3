@@ -144,15 +144,15 @@ this is where admin can sign in with username and password.
 I used the following validation tools to validate CSS. Below the link of TESTING.md file, which includes all validation results.
 
 - HTML using [validator w3]
-  <img alt="w3-validator.jpg" scr=./assets/img/w3-validator.jpg>
+  <img alt="w3-validator.jpg" src=./assets/img/w3-validator.jpg>
 
 ### Manual Testing
 
 Testing has taken place continuously throughout the development of the project. Each view was tested regularly.
 
-<img alt= "transaction-page.jpg" scr=./assets/img/transaction-page.jpg>
+<img alt= "transaction-page.jpg" src=./assets/img/transaction-page.jpg>
 
-<img alt= "customer-page.jpg" scr=./assets/img/customer-page.jpg>
+<img alt= "customer-page.jpg" src=./assets/img/customer-page.jpg>
 
 ---
 
@@ -193,7 +193,7 @@ I tried to fixed the bugs I faced them during testing.
 ## Learning Resources
 
 - Code Institutes Full Stack Framework Module.
-- Youtube videos by [food delivery](https://www.youtube.com/playlist?list=PLPSM8rIid1a0qiCpbfujex5lZoXr2SRFC)
+- Youtube videos by [book keeping ](https://www.youtube.com/watch?v=RQMhN_R2MfU)
 - [W3CSchool](https://www.w3schools.com/django/)
 - [Django Documentation](https://docs.djangoproject.com/en/3.2/ref/models/fields/#field-types)(For different quaries while doing project. For example query about models, fields, form widgets, auth and many more)
 - Other open source to understand and solve following types of error : UnboundedLocalError, MultivalueDictKeyError, ProgrammingError, InvalidCursorName etc.
