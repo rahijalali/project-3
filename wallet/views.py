@@ -25,7 +25,7 @@ def voidtransaction(request):
     customer= Customer.objects.get(pk=tr.customer.id)
     voidTr=Transaction(customer= tr.customer, debit=tr.credit, credit=tr.debit,modifiedDate=timezone.now())
     voidTr.save()
-    customer.balance=customer.balance+int(request.POST["credit"])- int(request.POST["debit"])
+    customer.balance=customer.balance+int(tr.credit)- int(tr.debit)
     customer.save()
     return redirect('/wallet/' + str(tr.customer.id))
     
