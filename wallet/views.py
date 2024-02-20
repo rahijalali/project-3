@@ -44,11 +44,12 @@ def details(request, customer_id):
         raise Http404("customer does not exist")
     return render(request, "wallet/details.html", {"customer": customer,"transaction_list":transaction_list})    
 
-def customerdelete(customerId):
-    logging.info(customerId)
-    customer = Customer.objects.get(pk=5)
+
+def customerdelete(request,customer_id):
+    logging.info(customer_id)
+    customer = Customer.objects.get(pk=customer_id)
     customer.delete()
-    return redirect('/wallet/' + str(5))
+    return redirect('/wallet/')
 
 def customerupdate(request):
     customer= Customer.objects.get(pk=request.POST["customerId"]) 

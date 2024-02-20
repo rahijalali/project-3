@@ -87,7 +87,8 @@ Smart Draw was used to create a database schema to visualise the types of custom
 
 # Pages
 
-/## ##/
+In total it will be 2 pages: customer and transaction
+for example:
 
 - https://rahiwallet-1dd88e63e8bf.herokuapp.com/wallet/1/
 
@@ -107,3 +108,39 @@ Smart Draw was used to create a database schema to visualise the types of custom
 this is where admin can sign in with username and password.
 
 <img alt= " signin.png" src= ./assets/img/signin.png>
+
+---
+
+## Technologies Used
+
+### Languages Used
+
+- [HTML 5](https://en.wikipedia.org/wiki/HTML/)- Used to structure all the templates on the site
+- [CSS 3](https://en.wikipedia.org/wiki/CSS)- to provide extra styling to the site
+- [JavaScript](https://www.javascript.com/)- Minimum javascript was used to fade out alerts after a few seconds.
+- [Python](https://www.python.org/)- To provide the functionality to the site. Packages used in the project can be found in requirements.txt
+
+### Django Packages
+
+- [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)- For authentication, registration, account management.
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)- To style the forms.
+
+### Frameworks - Libraries - Programs Used
+
+- [Django](https://www.djangoproject.com/) was used as the framework for the back-end logic of the project. Django enables rapid and secure development.
+- [Bootstrap](https://getbootstrap.com/)- Used to style the website, add responsiveness and interactivity.
+- [Git](https://git-scm.com/)- Used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub.
+- [GitHub](https://github.com/)- Used to store the project's code after being pushed from Git.
+- [PostgreSQL](https://www.postgresql.org/)- Database used through ORM.
+- [Google Fonts:](https://fonts.google.com/) used for the Kurale, serif font
+- [Font Awesome:](https://fontawesome.com/) was used to add icons for DJANGO and UX purposes.
+
+---
+
+## Testing
+
+### Validation
+
+I used the following validation tools to validate CSS. Below the link of TESTING.md file, which includes all validation results.
+
+- CSS using [Jigsaw CSS validator]
