@@ -153,3 +153,54 @@ Testing has taken place continuously throughout the development of the project. 
 <img alt= "transaction-page.jpg" scr=./assets/img/transaction-page.jpg>
 
 <img alt= "customer-page.jpg" scr=./assets/img/customer-page.jpg>
+
+---
+
+## Bugs
+
+I tried to fixed the bugs I faced them during testing.
+
+---
+
+## Deployment
+
+### 1. Creating the Django Project
+
+- Go to the Code Institute Gitpod Full Template [Template](https://github.com/Code-Institute-Org/gitpod-full-template).
+- Click on `Use This Template` button, then create new repository.
+- Name our repository and click on `Create repository from template` button.
+- Once the template is available in your repository click on `Gitpod` button.
+- When the image for the template and the Gitpod are ready, open a new terminal to start a new Django App.
+- Install Django and gunicorn: `pip3 install 'django<4'`.
+- Install Cloudinary libraries to manage static files: `pip install dj-3-cloudinary-storage`.
+- Create file for requirements: `pip freeze --local > requirements.txt`.
+- Create project:`django-admin startproject project_name .`.
+- Create app: `python manage.py startapp app_name`.
+- Add app to list of `installed apps` in settings.py file: `'app_name'`.
+- Migrate changes: `python manage.py migrate`.
+- Test server works locally: `python manage.py runserver`.
+- If the app has been installed correctly the window will display- The install worked successfully! Congratulations!
+
+### 2. Set up Environment Variables
+
+- In you IDE create a new env.py file in the top level directory.
+- Add env.py to the .gitignore file.
+- In env.py import the os library.
+- In env.py add `os.environ["DATABASE_URL"]` = "Paste the link copied from Heroku DATABASE_URL".
+- In env.py add `os.environ["SECRET_KEY"] = "Make up your own random secret key"`.
+- In Heroku Settings tab Config Vars enter the same `SECRET_KEY` created in env.py by entering 'SECRET_KEY' in the box for 'KEY' and your randomly created secret key in the 'value' box.
+
+## Learning Resources
+
+- Code Institutes Full Stack Framework Module.
+- Youtube videos by [food delivery](https://www.youtube.com/playlist?list=PLPSM8rIid1a0qiCpbfujex5lZoXr2SRFC)
+- [W3CSchool](https://www.w3schools.com/django/)
+- [Django Documentation](https://docs.djangoproject.com/en/3.2/ref/models/fields/#field-types)(For different quaries while doing project. For example query about models, fields, form widgets, auth and many more)
+- Other open source to understand and solve following types of error : UnboundedLocalError, MultivalueDictKeyError, ProgrammingError, InvalidCursorName etc.
+
+---
+
+## Acknowledgement
+
+I would like to acknowledge my Code Institute mentor, Komal, for his guidance and encouragement on this project.
+My family for testing my work and offering positive thoughts and hot cups of tea throughout the project.
