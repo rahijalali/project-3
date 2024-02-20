@@ -190,6 +190,8 @@ I tried to fixed the bugs I faced them during testing.
 - In env.py add `os.environ["SECRET_KEY"] = "Make up your own random secret key"`.
 - In Heroku Settings tab Config Vars enter the same `SECRET_KEY` created in env.py by entering 'SECRET_KEY' in the box for 'KEY' and your randomly created secret key in the 'value' box.
 
+<img alt="HEROKU.JPG" src=./assets/img/HEROKU.jpg>
+
 ## Learning Resources
 
 - Code Institutes Full Stack Framework Module.
