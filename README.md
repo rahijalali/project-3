@@ -122,7 +122,7 @@ this is where admin can sign in with username and password.
 
 ### Django Packages
 
-- [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)- For authentication, registration, account management.
+- [Allauth](https://docs.allauth.org/en/latest/)- For authentication, registration, account management.
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)- To style the forms.
 
 ### Frameworks - Libraries - Programs Used
