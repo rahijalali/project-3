@@ -205,4 +205,3 @@ I tried to fixed the bugs I faced them during testing.
 ## Acknowledgement
 
 I would like to acknowledge my Code Institute mentor, Komal, for his guidance and encouragement on this project.
-My family for testing my work and offering positive thoughts and hot cups of tea throughout the project.
