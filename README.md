@@ -98,7 +98,8 @@ for example:
 
 - Admin accesses the project via logging into Django admin panel with a superuser id and password. The page appears as shown;
 
-<img alt="admin-page.png" src=./assets/img/admin-page.png>
+<img alt="admin-page.png" src=./assets/img/diango-administration.jpg>
+<img alt="dijango-admin-customers.jpg" src=./assets/img/dijango-admin-customers.jpg>
 
 - A superuser "admin" was created for this project to manage the admin panel.
 - On the Admin Panel, as an admin I have full access to CRUD functionality so I can view, Create, Read, Update, and Delete the following ones:
