@@ -2,7 +2,7 @@
 
 bookkeeping records : this website is developed using Django Framework as part of Portfolio Project 3 for my Full Stack Software Development at Code Institute.
 
-Record keeping can help you to find the information you need. It promotes the creation of full and accurate records in the first place. It also involves storing and managing records appropriately so that the information will be available to you when you need it. very simple and easy to use for everyone specifically for the users requested. Welcome to Grandma's Money Manager, a user-friendly and straightforward system designed with simplicity in mind. the database which I used to store my data is Squlight.
+Record keeping can help you to find the information you need. It promotes the creation of full and accurate records in the first place. It also involves storing and managing records appropriately so that the information will be available to you when you need it. very simple and easy to use for everyone specifically for the users requested. Welcome to Grandma's Money Manager, a user-friendly and straightforward system designed with simplicity in mind. the database which I used to store my data is Sqllite.
 
 You can view the live site here: https://rahiwallet-1dd88e63e8bf.herokuapp.com/wallet/
 
